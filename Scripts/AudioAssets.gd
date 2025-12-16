@@ -16,11 +16,15 @@ enum BUS_TYPE {
 @export var AudioType : SOUND_TYPE
 @export var AudioFile : AudioStream
 @export var BusType : BUS_TYPE
+var BusTypeName : String
 @export_range(-40,20) var volume : float = 0
 @export_range(0.0, 4.0,.01) var pitch_scale: float = 1.0
 @export_range(0.0, 1.0,.01) var pitch_randomness: float = 0.0
 
 var audio_count : int = 0 
+
+func _ready() -> void:
+	BusTypeName = BUS_TYPE.keys()[BusType]
 
 func change_audio_count(amount: int) -> void:
 	audio_count = max(0, audio_count + amount)
