@@ -34,13 +34,9 @@ func play_Audio(type : AudioAsset.SOUND_TYPE) -> void:
 		if audio_Asset.has_open_limit():
 			audio_Asset.change_audio_count(1)
 			var new2D_Audio_Player : AudioStreamPlayer = AudioStreamPlayer.new()
-			
 			var BusTypeInt : int = audio_Asset.BusType
 			var BusTypeName : String = AudioAsset.BUS_TYPE.keys()[BusTypeInt]
-			print(BusTypeName)
-			
 			new2D_Audio_Player.bus = BusTypeName
-			print(new2D_Audio_Player.bus)
 			add_child(new2D_Audio_Player)
 			new2D_Audio_Player.stream = audio_Asset.AudioFile
 			new2D_Audio_Player.volume_db = audio_Asset.volume
