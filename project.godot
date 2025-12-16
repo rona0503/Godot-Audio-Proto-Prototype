@@ -14,6 +14,10 @@ config/name="Audio Proto-Prototype"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioSystem="*res://Autoload/Scene/audio_system.tscn"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
